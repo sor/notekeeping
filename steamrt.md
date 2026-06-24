@@ -1,4 +1,5 @@
 # Steam Runtime / SDK
+https://gitlab.steamos.cloud/steamrt/steamrt4/sdk
 
 ## List installed Packages
 apt list --installed|tail +2|less
@@ -29,3 +30,16 @@ additional_packages="gdb strace ltrace valgrind" # add more here
 
 ## Recreate Distrobox
 distrobox-assemble create --replace --file ~/.config/distrobox/distrobox.ini
+
+## Test Game with Pressure-Vessel
+```sh
+/path/to/pressure-vessel-launch \
+  --runtime-path=/path/to/SteamLinuxRuntime_sniper/ \
+  -- /path/to/your/game_executable
+```
+
+## RT4 SDK installed files
+https://repo.steampowered.com/steamrt4/images/latest-container-runtime-depot/com.valvesoftware.SteamRuntime.Sdk-amd64,i386-steamrt4.manifest.dpkg
+
+RT3 for comparison:
+https://repo.steampowered.com/steamrt-images-sniper/snapshots/latest-container-runtime-depot/com.valvesoftware.SteamRuntime.Sdk-amd64%2Ci386-sniper.manifest.dpkg
